@@ -50,4 +50,11 @@ public class Component {
             else throw new IllegalArgumentException("Price too high");
         }
     }
+    private double roundPrice(double price) {
+        return Math.round(price * 100.00d) / 100.00d;
+    }
+    public String toString() {
+        return name + "-" + manufacturer + ", price: $" + roundPrice(price);
+        
+    }
 }
