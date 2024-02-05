@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Component {
     private String name;
     private String manufacturer;
@@ -26,7 +30,11 @@ public class Component {
     }
 
     public void setManufacturer(String manufacturer) {
-        this.manufacturer = manufacturer;
+        List<String> validManufacturers = Arrays.asList("3Com","Acer","Arctic","AMD", "Asus","Apple Inc.","Bose","Cooler Master", "Hitachi", "Intel", "Logitech", "Marvell", "Nvidia", "Qualcomm", "Samsung","Tyan","Fujitsu","MSI","Seagate","Toshiba", "Western Digital", "XTREEM");
+        if (validManufacturers.contains(manufacturer)) {
+            this.manufacturer = manufacturer;
+        }
+        else throw new IllegalArgumentException("Manufacturer not in list");
     }
 
     public double getPrice() {
