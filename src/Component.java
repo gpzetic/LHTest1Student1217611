@@ -13,7 +13,12 @@ public class Component {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (name.length() >= 3) {
+            this.name = name;
+        }
+        else {
+            throw new IllegalArgumentException("Name too short");
+        }
     }
 
     public String getManufacturer() {
