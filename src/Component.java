@@ -1,8 +1,8 @@
 public class Component {
     private String name;
     private String manufacturer;
-    private int price;
-    public Component(String name, String manufacturer, int price) {
+    private double price;
+    public Component(String name, String manufacturer, double price) {
         setName(name);
         setManufacturer(manufacturer);
         setPrice(price);
@@ -29,11 +29,17 @@ public class Component {
         this.manufacturer = manufacturer;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPrice(double price) {
+        if (price >= 0 && price <= 10000) {
+            this.price = price;
+        }
+        else {
+            if (price < 0) throw new IllegalArgumentException("Price too low");
+            else throw new IllegalArgumentException("Price too high");
+        }
     }
 }
