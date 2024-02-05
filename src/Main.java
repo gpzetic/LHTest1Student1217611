@@ -9,5 +9,6 @@ public class Main {
         sc.addItem(c);
         System.out.println(sc.getComponentNames());
         System.out.println(sc.getTotalPrice());
+        System.out.println(sc.toString());
     }
 }

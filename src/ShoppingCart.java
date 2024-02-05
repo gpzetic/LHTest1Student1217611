@@ -22,4 +22,7 @@ public class ShoppingCart {
         }
         return componentNames;
     }
+    public String toString() {
+        return "The cart has " + components.size() + " components with a total price of $" + getTotalPrice();
+    }
 }
