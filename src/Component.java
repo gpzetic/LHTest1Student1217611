@@ -34,7 +34,7 @@ public class Component {
         if (validManufacturers.contains(manufacturer)) {
             this.manufacturer = manufacturer;
         }
-        else throw new IllegalArgumentException("Manufacturer not in list");
+        else throw new IllegalArgumentException("Manufacturer not in list of valid manufacturers");
     }
 
     public double getPrice() {
