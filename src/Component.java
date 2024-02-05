@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -50,10 +49,11 @@ public class Component {
             else throw new IllegalArgumentException("Price too high");
         }
     }
-    private double roundPrice(double price) {
+    public double roundPrice(double price) {
         return Math.round(price * 100.00d) / 100.00d;
     }
-    public String toString() {
+    public String toString()
+    {
         return name + "-" + manufacturer + ", price: $" + roundPrice(price);
         
     }
